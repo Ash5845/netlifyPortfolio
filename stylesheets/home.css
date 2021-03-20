@@ -114,15 +114,18 @@ html {
 }
 .home .home-content .text-1 {
     font-size: 27px;
+    animation: slideInFromLeft 0.5s ease-in;
 }
 .home .home-content .text-2 {
     font-size: 75px;
     font-weight: 600;
     margin-left: -3px;
+    animation: slideInFromRight 0.5s ease-in;
 }
 .home .home-content .text-3 {
     font-size: 40px;
-    margin: 5px 0
+    margin: 5px 0;
+    animation: slideInFromLeft 0.5s ease-in;
 }
 .home .home-content span {
     color: #006DCC;
@@ -168,6 +171,7 @@ section .title{
     margin-bottom: 60px;
     padding-bottom: 20px;
     font-family: 'Ubuntu', sans-serif;
+    animation: slideInFromTop 0.5s ease-in;
 }
 section .title::before{
     content: "";
@@ -184,6 +188,7 @@ section .title::before{
 /* about section styling */
 .about .about-content .left{
     width: 45%;
+    animation: slideInFromLeft 0.5s ease-in;
 }
 .about .about-content .left img{
     height: 400px;
@@ -192,6 +197,7 @@ section .title::before{
 }
 .about .about-content .right{
     width: 55%;
+    animation: slideInFromRight 0.5s ease-in;
 }
 .about .about-content .right .text{
     font-size: 25px;
@@ -235,6 +241,7 @@ section .title::before{
     padding: 20px 25px;
     cursor: pointer;
     margin-bottom: 20px;
+    animation: slideInFromBottom 0.5s ease-in;
 }
 .portfolio .portfolio-content .card .box{
     transition: all 0.3s ease;
@@ -288,6 +295,12 @@ section .title::before{
     display: flex;
     flex-basis: calc(50% - 30px);
     flex-wrap: wrap;
+}
+.skills .skills-content .right {
+    animation: slideInFromRight 0.5s ease-in;
+}
+.skills .skills-content .left {
+    animation: slideInFromLeft 0.5s ease-in;
 }
 .skills .skills-content .card{
     width: calc(33% - 20px);
@@ -438,6 +451,42 @@ footer span a:hover {
     text-decoration: underline;
 }
 
+/* Animations */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%)
+    }
+    100% {
+        transform: translateX(0)
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%)
+    }
+    100% {
+        transform: translateX(0)
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%)
+    }
+    100% {
+        transform: translateX(0)
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%)
+    }
+    100% {
+        transform: translateX(0)
+    }
+}
 
 /* responsive media queries */
 @media (max-width: 1300px){
